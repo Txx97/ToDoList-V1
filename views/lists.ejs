@@ -1,0 +1,20 @@
+<%- include ("header") -%>
+<body>
+  <div class="box" id="heading">
+    <h1 style="color:#481581"> <%= listTitle %> </h1>
+  </div>
+
+<div class="box">
+  <% for(i=0;i<newListItems.length;i++){ %>
+    <div class="item">
+      <input type="checkbox">
+<p><%= newListItems[i] %></p>
+    </div>
+   <% } %>
+   <form class="item" action="/" method="post">
+     <input type="text" name="ToDoList" placeholder="Add new item" autocomplete="off">
+     <button type="submit" name="list"value= <%= listTitle %>>+</button>
+</div>
+</form>
+
+<%- include ("footer") -%>
