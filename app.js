@@ -42,7 +42,7 @@ app.get("/work", function(req,res){
 app.post("/work", function(req,res){
   let item= req.body.ToDoList;
   workList.push(item);
-  res.refirect("/work");
+  res.redirect("/work");
 });
 
 
